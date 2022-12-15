@@ -1,0 +1,30 @@
+package framework;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class DemoPOM {
+	
+	@FindBy(xpath="//input[@id='email']") WebElement userID;
+	@FindBy(xpath="//input[@id='pass']") WebElement pass;
+	@FindBy(xpath="//button[@name='login']") WebElement loginBtn;
+	
+	DemoPOM(WebDriver driver){
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void enterUserId(String id) {
+		userID.sendKeys(id);
+	}
+	
+	public void enterPassword(String pwd) {
+		pass.sendKeys(pwd);
+	}
+	public void clickLoginBtn() {
+		loginBtn.click();
+	}
+	
+
+}
