@@ -28,3 +28,59 @@ public class Program11 {
 	}
 
 }
+
+package collection1;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		
+		ArrayList al = new ArrayList();
+		
+		System.out.println(al.isEmpty());
+		System.out.println(al.size());
+		
+		al.add(5);
+		al.add("xyz");
+		al.add('A');
+		al.add(null);
+		al.add("xyz");
+		
+		System.out.println(al);
+		
+		System.out.println(al.isEmpty());
+		System.out.println(al.size());
+		
+		System.out.println("----------");
+		
+		System.out.println(al.indexOf("xyz"));
+		System.out.println(al.indexOf("xyz"));
+		
+		System.out.println(al.get(4));
+		System.out.println(al.contains('A'));
+		System.out.println(al.lastIndexOf("xyz"));
+		al.set(3,"aaaa");
+		System.out.println(al);
+		
+		al.remove(3);
+		System.out.println(al);
+		
+		System.out.println("----Iteration-----");
+		
+		Iterator itr = al.iterator();
+		while(itr.hasNext());
+		System.out.println(itr.hasNext());
+		
+		System.out.println("-----loop-----");
+		
+		for(int i=0; i<=al.size()-1; i++);{
+		int i = 0;
+		System.out.println(al.get(i));
+		}
+
+	}
+}
+
